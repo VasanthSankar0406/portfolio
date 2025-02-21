@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vasanth Sankar's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            color: #2C3E50;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        nav {
+            background-color: #1ABC9C;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #16A085;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #home {
+            background: linear-gradient(45deg, #1ABC9C, #16A085);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #home h1 {
+            font-size: 3rem;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        #skills {
+            background-color: #ecf0f1;
+        }
+
+        #learning-journey {
+            background-color: #ffffff;
+        }
+
+        #contact {
+            background-color: #34495E;
+            color: white;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .skill-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .learning-journey-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .learning-journey-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            padding: 12px;
+            border-radius: 50%;
+            background-color: #16A085;
+            transition: background-color 0.3s;
+            font-size: 18px;
+        }
+
+        .social-links a:hover {
+            background-color: #1ABC9C;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #1ABC9C;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #16A085;
+        }
+
+        @media (max-width: 768px) {
+            .skills-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .learning-journey-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .learning-journey-card {
+                padding: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .social-links a {
+                margin: 0 15px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #home h1 {
+                font-size: 2.5rem;
+            }
+
+            #home p {
+                font-size: 1rem;
+            }
+
+            .skill-card {
+                width: 200px;
+            }
+
+            .learning-journey-card {
+                width: 200px;
+                padding: 10px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+                padding: 8px;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mail{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#learning-journey">Learning Journey</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Hi, I'm Vasanth Sankar</h1>
+        <p>Welcome to my design portfolio! I’m passionate about crafting beautiful, user-friendly experiences. Let's connect!</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>Web Design</h3>
+                <p>Creating intuitive and responsive designs that work across devices.</p>
+            </div>
+            <div class="skill-card">
+                <h3>UI/UX</h3>
+                <p>Focusing on user-centered designs and seamless experiences.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Graphic Design</h3>
+                <p>Designing eye-catching logos and branding materials.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="learning-journey">
+        <h2 class="mail">My Learning Journey</h2>z
+        <div class="learning-journey-container">
+            <div class="learning-journey-card mail">
+                <h3>HTML & CSS</h3>
+                <p>I've been diving into the basics of web development and creating responsive websites with HTML & CSS.</p>
+            </div>
+            <div class="learning-journey-card mail">
+                <h3>JavaScript</h3>
+                <p>Currently learning JavaScript to enhance interactivity on websites and web applications.</p>
+            </div>
+            <div class="learning-journey-card">
+                <h3>Figma & Adobe XD</h3>
+                <p>Exploring tools like Figma and Adobe XD to create beautiful UI/UX designs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p class="mail">Email: 2312044@nec.edu.in.com</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/vasanth-sankar" target="_blank">LinkedIn</a>
+            <a href="https://github.com/vasanth-sankar" target="_blank">GitHub</a>
+            <a href="https://twitter.com/vasanth_sankar" target="_blank">Twitter</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>View my code on <a href="https://github.com/vasanth-sankar" target="_blank">GitHub</a></p>
+    </footer>
+</body>
+</html>
